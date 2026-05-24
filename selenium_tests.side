@@ -7,92 +7,64 @@
     "id": "b2c3d4e5-f6a7-8901-2345-6789abcdef01",
     "name": "Validation_Tests",
     "commands": [{
-      "id": "c3d4e5f6-a7b8-9012-3456-789abcdef012",
-      "comment": "1. Navigate to the application",
+      "id": "cmd1-navigate",
+      "comment": "Open the application",
       "command": "open",
       "target": "/daniel-yuval-bar-chany-shani/index.jsp",
       "targets": [],
       "value": ""
     }, {
-      "id": "d4e5f6a7-b8c9-0123-4567-89abcdef0123",
-      "comment": "Validation 1: Verify the page title is correct",
-      "command": "assertTitle",
-      "target": "DevOps Final Project - HIT",
+      "id": "cmd2-verify",
+      "comment": "Validation 1 (Verify): Verify link exists",
+      "command": "verifyElementPresent",
+      "target": "id=repoLink",
       "targets": [],
       "value": ""
     }, {
-      "id": "e5f6a7b8-c9d0-1234-5678-9abcdef01234",
-      "comment": "Validation 2: Verify the input text box is present on the page",
-      "command": "assertElementPresent",
-      "target": "id=nameInput",
-      "targets": [
-        ["id=nameInput", "id"],
-        ["name=testValue", "name"],
-        ["css=#nameInput", "css:finder"],
-        ["xpath=//input[@id='nameInput']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "f6a7b8c9-d0e1-2345-6789-abcdef012345",
-      "comment": "Validation 3: Verify the team members text is correct",
+      "id": "cmd3-assert",
+      "comment": "Validation 2 (Assert): Assert specific text is present",
       "command": "assertText",
       "target": "css=h3",
-      "targets": [
-        ["css=h3", "css:finder"],
-        ["xpath=//h3", "xpath:position"],
-        ["xpath=//h3[contains(.,'Team: Daniel, Yuval, Bar, Chany, Shani')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": "Team: Daniel, Yuval, Bar, Chany, Shani"
     }, {
-      "id": "a7b8c9d0-e1f2-3456-789a-bcdef0123456",
-      "comment": "Validation 4 (Positive Test): Type a value into the input box",
+      "id": "cmd4-positive",
+      "comment": "Validation 3 (Positive): Enter valid name",
       "command": "type",
       "target": "id=nameInput",
-      "targets": [
-        ["id=nameInput", "id"],
-        ["name=testValue", "name"],
-        ["css=#nameInput", "css:finder"],
-        ["xpath=//input[@id='nameInput']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "DevOps Rocks"
+      "targets": [],
+      "value": "Valid DevOps Name"
     }, {
-      "id": "b8c9d0e1-f2a3-4567-89ab-cdef01234567",
-      "comment": "Validation 4 (Positive Test): Click the submit button",
+      "id": "cmd5-click",
+      "comment": "Validation 4 (Click): Click the button works",
       "command": "click",
       "target": "id=submitBtn",
-      "targets": [
-        ["id=submitBtn", "id"],
-        ["css=#submitBtn", "css:finder"],
-        ["xpath=//button[@id='submitBtn']", "xpath:attributes"],
-        ["xpath=//button", "xpath:position"],
-        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
-      "id": "c9d0e1f2-a3b4-5678-9abc-def012345678",
-      "comment": "Validation 4 (Positive Test): Verify the result message appears containing the submitted text",
+      "id": "cmd6-wait",
+      "comment": "Wait for positive result to render",
       "command": "assertText",
       "target": "id=resultMsg",
-      "targets": [
-        ["id=resultMsg", "id"],
-        ["css=#resultMsg", "css:finder"],
-        ["xpath=//p[@id='resultMsg']", "xpath:attributes"],
-        ["xpath=//p", "xpath:position"],
-        ["xpath=//p[contains(.,'You submitted: DevOps Rocks')]", "xpath:innerText"]
-      ],
-      "value": "You submitted: DevOps Rocks"
+      "targets": [],
+      "value": "You submitted: Valid DevOps Name"
     }, {
-      "id": "d0e1f2a3-b4c5-6789-abcd-ef0123456789",
-      "comment": "Validation 5 (Negative Test/Assertion): Verify that submitting an empty form doesn't show the success message (we reload the page first to clear state)",
+      "id": "cmd7-reload",
+      "comment": "Reload to clear state for negative test",
       "command": "open",
       "target": "/daniel-yuval-bar-chany-shani/index.jsp",
       "targets": [],
       "value": ""
     }, {
-      "id": "e1f2a3b4-c5d6-789a-bcde-f0123456789a",
-      "comment": "Validation 5 (Negative Test): Ensure the result message element is NOT present when page first loads",
+      "id": "cmd8-negative",
+      "comment": "Validation 5 (Negative): Empty textbox should not show result",
+      "command": "click",
+      "target": "id=submitBtn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cmd9-negative-assert",
+      "comment": "Assert that result element is NOT present because of empty input",
       "command": "assertElementNotPresent",
       "target": "id=resultMsg",
       "targets": [],
