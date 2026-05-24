@@ -2,7 +2,7 @@
   "id": "a1b2c3d4-e5f6-7890-1234-56789abcdef0",
   "version": "2.0",
   "name": "DevOps_Final_Project_Tests",
-  "url": "https://silk-spore-huskiness.ngrok-free.dev",
+  "url": "http://localhost:8080",
   "tests": [{
     "id": "b2c3d4e5-f6a7-8901-2345-6789abcdef01",
     "name": "Validation_Tests",
@@ -79,6 +79,6 @@
     "timeout": 300,
     "tests": ["b2c3d4e5-f6a7-8901-2345-6789abcdef01"]
   }],
-  "urls": ["https://silk-spore-huskiness.ngrok-free.dev/"],
+  "urls": ["http://localhost:8080/"],
   "plugins": []
 }
