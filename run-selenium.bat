@@ -1,3 +1,1 @@
-@echo off
-echo "Running Selenium Tests on Chrome (Headless CI Mode)..."
-selenium-side-runner -c "browserName=chrome goog:chromeOptions.args=[--headless,--no-sandbox,--disable-dev-shm-usage]" "selenium_tests.side"
+@echo off echo "Running Selenium Tests on Chrome Headless with ngrok bypass..." selenium-side-runner selenium_tests.side -c "browserName=chrome goog:chromeOptions.args=[--headless
