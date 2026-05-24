@@ -1,3 +1,3 @@
 @echo off
-echo "Running Selenium Tests on Firefox (Headless)..."
-selenium-side-runner -c "browserName=firefox moz:firefoxOptions.args=[-headless]" "selenium_tests.side"
+echo "Running Selenium Tests on Chrome (Headless CI Mode)..."
+selenium-side-runner -c "browserName=chrome goog:chromeOptions.args=[--headless,--no-sandbox,--disable-dev-shm-usage]" "selenium_tests.side"
