@@ -5,17 +5,17 @@
 	"url": "https://silk-spore-huskiness.ngrok-free.dev",
 	"tests": [{
 		"id": "b2c3d4e5-f6a7-8901-2345-6789abcdef01",
-		"name": "Validation_Tests",
+		"name": "Validation_Tests_Ngrok",
 		"commands": [{
 			"id": "cmd1",
-			"comment": "Open the application",
+			"comment": "Open the application using the public ngrok URL",
 			"command": "open",
-			"target": "/daniel-yuval-bar-chany-shani/",
+			"target": "https://silk-spore-huskiness.ngrok-free.dev/daniel-yuval-bar-chany-shani/",
 			"targets": [],
 			"value": ""
 		}, {
 			"id": "cmd2",
-			"comment": "Validation 1: Verify main heading is displayed",
+			"comment": "Validation 1: Assert main heading is displayed",
 			"command": "assertText",
 			"target": "css=h1",
 			"targets": [],
@@ -23,48 +23,48 @@
 		}, {
 			"id": "cmd3",
 			"comment": "Validation 2: Verify input textbox exists",
-			"command": "assertElementPresent",
+			"command": "verifyElementPresent",
 			"target": "id=nameInput",
 			"targets": [],
 			"value": ""
 		}, {
 			"id": "cmd4",
 			"comment": "Validation 3: Verify submit button exists",
-			"command": "assertElementPresent",
+			"command": "verifyElementPresent",
 			"target": "id=submitBtn",
 			"targets": [],
 			"value": ""
 		}, {
 			"id": "cmd5",
 			"comment": "Validation 4: Verify GitHub link exists",
-			"command": "assertElementPresent",
+			"command": "verifyElementPresent",
 			"target": "id=repoLink",
 			"targets": [],
 			"value": ""
 		}, {
 			"id": "cmd6",
-			"comment": "Type valid value",
+			"comment": "Type a valid value into the input textbox",
 			"command": "type",
 			"target": "id=nameInput",
 			"targets": [],
 			"value": "Valid DevOps Name"
 		}, {
 			"id": "cmd7",
-			"comment": "Click submit button",
+			"comment": "Click the submit button",
 			"command": "click",
 			"target": "id=submitBtn",
 			"targets": [],
 			"value": ""
 		}, {
 			"id": "cmd8",
-			"comment": "Wait for result message",
+			"comment": "Wait for the result message to appear",
 			"command": "waitForElementPresent",
 			"target": "id=resultMsg",
 			"targets": [],
 			"value": "5000"
 		}, {
 			"id": "cmd9",
-			"comment": "Validation 5: Verify result contains submitted value",
+			"comment": "Validation 5: Assert result message contains the submitted value",
 			"command": "assertText",
 			"target": "id=resultMsg",
 			"targets": [],
