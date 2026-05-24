@@ -1,4 +1,4 @@
-$url = "http://localhost:8080/daniel-yuval-bar-chany-shani/index.jsp"
+$url = "https://silk-spore-huskiness.ngrok-free.dev/daniel-yuval-bar-chany-shani/index.jsp"
 Write-Output "Attempting to reach: $url"
 try {
     $response = Invoke-WebRequest -Uri $url -Method Get -TimeoutSec 10 -UseBasicParsing
