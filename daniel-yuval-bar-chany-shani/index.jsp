@@ -36,7 +36,7 @@
         %>
 
         <hr>
-        <p>Check out our code on <a href="https://github.com" id="repoLink" target="_blank">GitHub</a>.</p>
+        <p>Check out our code on <a href="https://github.com/ItsBarMor/Bar_Yuval_Chany_Dani_Shani_DevOps_Final.git" id="repoLink" target="_blank">GitHub</a>.</p>
     </div>
 </body>
 </html>
